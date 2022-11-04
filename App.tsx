@@ -11,7 +11,7 @@ import { Loading } from "./src/components/Loading";
 
 import { THEME } from "./src/styles/theme";
 import { AuthContextProvider } from "./src/context/AuthContext";
-import { Pools } from "./src/screens/Pools";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +28,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {!fontsLoaded ? <Loading /> : <Pools />}
+        {!fontsLoaded ? <Loading /> : <Routes />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
